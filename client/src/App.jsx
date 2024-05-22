@@ -1,8 +1,3 @@
-// Filename - App.js
-// It contains the Form, its Structure
-// and Basic Form Functionalities
-
-
 import {  useState } from "react";
 import axios from "axios"
 import '../src/App.css';
