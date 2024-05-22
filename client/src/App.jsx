@@ -4,6 +4,7 @@
 
 
 import {  useState } from "react";
+import axios from "axios"
 import '../src/App.css';
 
 function App() {
@@ -37,7 +38,22 @@ function App() {
             about
         );
 
-        // Submit all state variables here
+        axios.post('http://localhost:3000/submit', { firstName,
+        lastName,
+        email,
+        contact,
+        gender,
+        selectedOption,
+        subjects,
+        resume,
+        url,
+        about})
+        .then(response => {
+            console.log(response.data);
+        })
+        .catch(error => {
+            console.error('There was an error submitting the form!', error);
+        });
 
         setFirstName("");
         setLastName("");
@@ -80,7 +96,7 @@ function App() {
         <div className="App">
             <h1>Form in React</h1>
             <fieldset>
-                <form action="#" method="get">
+                <form method="post">
                     <label htmlFor="firstname">
                         First Name*
                     </label>

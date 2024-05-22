@@ -1,4 +1,5 @@
 // server.js
+const cors = require('cors')
 const express = require('express');
 const bodyParser = require('body-parser');
 const multer = require('multer');
@@ -7,7 +8,7 @@ const port = 3000;
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
-
+app.use(cors())
 // Configure multer for file uploads
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
