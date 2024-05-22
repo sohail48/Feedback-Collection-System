@@ -3,7 +3,7 @@
 // and Basic Form Functionalities
 
 
-import { React, useState } from "react";
+import {  useState } from "react";
 import '../src/App.css';
 
 function App() {
@@ -81,7 +81,7 @@ function App() {
             <h1>Form in React</h1>
             <fieldset>
                 <form action="#" method="get">
-                    <label for="firstname">
+                    <label htmlFor="firstname">
                         First Name*
                     </label>
                     <input
@@ -95,7 +95,7 @@ function App() {
                         placeholder="Enter First Name"
                         required
                     />
-                    <label for="lastname">Last Name*</label>
+                    <label htmlFor="lastname">Last Name*</label>
                     <input
                         type="text"
                         name="lastname"
@@ -107,7 +107,7 @@ function App() {
                         placeholder="Enter Last Name"
                         required
                     />
-                    <label for="email">Enter Email* </label>
+                    <label htmlFor="email">Enter Email* </label>
                     <input
                         type="email"
                         name="email"
@@ -119,7 +119,7 @@ function App() {
                         placeholder="Enter email"
                         required
                     />
-                    <label for="tel">Contact*</label>
+                    <label htmlFor="tel">Contact*</label>
                     <input
                         type="tel"
                         name="contact"
@@ -131,7 +131,7 @@ function App() {
                         placeholder="Enter Mobile number"
                         required
                     />
-                    <label for="gender">Gender*</label>
+                    <label htmlFor="gender">Gender*</label>
                     <input
                         type="radio"
                         name="gender"
@@ -165,7 +165,7 @@ function App() {
                         }
                     />
                     Other
-                    <label for="lang">
+                    <label htmlFor="lang">
                         Your best Subject
                     </label>
                     <input
@@ -173,7 +173,7 @@ function App() {
                         name="lang"
                         id="english"
                         checked={subjects.english === true}
-                        onChange={(e) =>
+                        onChange={() =>
                             handleSubjectChange("english")
                         }
                     />
@@ -183,7 +183,7 @@ function App() {
                         name="lang"
                         id="maths"
                         checked={subjects.maths === true}
-                        onChange={(e) =>
+                        onChange={() =>
                             handleSubjectChange("maths")
                         }
                     />
@@ -193,12 +193,12 @@ function App() {
                         name="lang"
                         id="physics"
                         checked={subjects.physics === true}
-                        onChange={(e) =>
+                        onChange={() =>
                             handleSubjectChange("physics")
                         }
                     />
                     Physics
-                    <label for="file">Upload Resume*</label>
+                    <label htmlFor="file">Upload Resume*</label>
                     <input
                         type="file"
                         name="file"
@@ -209,7 +209,7 @@ function App() {
                         placeholder="Enter Upload File"
                         required
                     />
-                    <label for="url">Enter URL*</label>
+                    <label htmlFor="url">Enter URL*</label>
                     <input
                         type="url"
                         name="url"
@@ -256,7 +256,7 @@ function App() {
                             </option>
                         </optgroup>
                     </select>
-                    <label for="about">About</label>
+                    <label htmlFor="about">About</label>
                     <textarea
                         name="about"
                         id="about"
