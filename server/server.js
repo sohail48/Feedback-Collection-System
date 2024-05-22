@@ -4,7 +4,7 @@ const multer = require('multer');
 const mongoose = require('mongoose');
 const path = require('path');
 const fs = require('fs');
-
+const cors = require('cors');
 const app = express();
 const port = 3000;
 
@@ -32,7 +32,7 @@ const FormData = mongoose.model('FormData', formDataSchema);
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
-
+app.use(cors())
 // Configure multer for file uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
